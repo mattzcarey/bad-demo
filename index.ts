@@ -1,3 +1,7 @@
+// This is a horrible app with lots of bad practises and bugs.
+//Lets find them with the power of AI
+
+// Introducing Code Review GPT......
 const express = require("express");
 const crypto = require("crypto");
 const fs = require("fs");
