@@ -33,3 +33,28 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
   console.log(`SECRET_KEY is: ${SECRET_KEY}`);
 });
+
+const calculateProduct3DArray = (array3D) => {
+  let product = 1;
+  for (let i = 0; i < array3D.length; i++) {
+    for (let j = 0; j < array3D[i].length; j++) {
+      for (let k = 0; k < array3D[i][j].length; k++) {
+        product *= array3D[i][j][k];
+      }
+    }
+  }
+  return product;
+};
+
+let testArray = [
+  [
+    [1, 2, 3],
+    [4, 5, 6],
+  ],
+  [
+    [7, 8, 9],
+    [10, 11, 12],
+  ],
+];
+
+console.log(calculateProduct3DArray(testArray));
