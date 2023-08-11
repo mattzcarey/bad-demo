@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const app = express();
 
-const SECRET_KEY = "my-secret-key";
+const SECRET_KEY = "1234567890_0987654321";
 
 app.get("/fib", (req, res) => {
   const num = req.query.num;
@@ -18,6 +18,8 @@ app.get("/fib", (req, res) => {
     a = b;
     b = c;
   }
+
+  console.log(`Fibonacci number ${num} is ${c}`);
 
   const encrypted = crypto
     .createHmac("sha256", SECRET_KEY)
@@ -58,3 +60,5 @@ let testArray = [
 ];
 
 console.log(calculateProduct3DArray(testArray));
+
+console.log(`This is a secret test: ${SECRET_KEY}`);
